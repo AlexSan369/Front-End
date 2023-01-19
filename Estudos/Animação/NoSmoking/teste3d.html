@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+        display: flex; justify-content: center; align-items: center;
+        min-height: 100vh;
+        background-color: #222;
+    }
+    .container{
+        
+        transform-style: preserve-3d;
+        animation: animate 15s infinite linear;
+    }
+    @keyframes animate{
+        0% {
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(360deg);
+    }
+    }
+    .espetinho{
+        background-color: orange;
+        position: relative;
+        width: 200px;
+        height: 5px;
+        border-radius: 0 50% 50% 0;
+        transform: translate(-50%,-50%);
+        transform-style: preserve-3d;
+    }
+    span{
+        position: absolute;
+        top:-130%;
+        text-transform: uppercase;
+        transform: rotateX(calc(var(--i) * 90deg)) translateZ(10px);
+        transform-style: preserve-3d;
+    }
+    .arrumaEspetinho{
+        animation: animateReverse 15s infinite linear;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+            <div class="espetinho">
+                <span style="--i:1;">Carne</span>
+                <span style="--i:2; color: blue;">Carne</span>
+                <span style="--i:3; color: red;">Carne</span>
+                <span style="--i:4; color: yellow;">Carne</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

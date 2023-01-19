@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Creepster Regular';
+    src: url(fonts/Creepster-Regular.ttf);
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #080404;  
+}
+body{
+    overflow-x: hidden;
+    background: #080404;
+}
+.circleTV{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 
+                0 0 0 5px red,
+                0 0 0 10px white,
+                0 0 0 15px red,
+                0 0 0 20px white,
+                0 0 0 25px red,
+                0 0 0 30px white,
+                0 0 0 35px red,
+                0 0 0 40px white,
+                0 0 0 45px red,
+                0 0 0 50px white,
+                inset 0 0 0 10px white,
+                inset 0 0 0 12px red,
+                inset 0 0 0 14px red,
+                inset 0 0 0 19px white,
+                inset 0 0 0 23px red,
+                inset 0 0 0 24px red;
+                transform: scalex(1.3) translateX(150%);
+                color: yellowgreen;
+                text-transform: uppercase;
+                font-size: 3.3rem;
+                font-family: 'Creepster Regular';
+                text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+}
+section{
+    width: 100%;
+    display: flex;
+}
+.logo{
+    width: 40%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+nav{
+    width: 60%;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+nav ul li{
+    background: hsl(356deg 87% 15%);
+    padding: 10px 16px;
+    padding-top: 25px;
+    border-radius:0 0 16px 16px;
+    margin-left: 0.5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px; color:#df8411 ;
+}
+nav ul li:nth-child(2){ margin-left: 10%;}
+
+.central{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cartaz{
+    width: 50%; height: 100%;
+    border-radius: 8px 8px 0 0;
+    margin-left: 40px;
+    
+    position: relative;
+}
+.cartaz h1{
+    width: 80%;
+    border-radius: 4px;
+    text-align: center;
+    color:#f0f0f0;
+    padding: 16px;
+    background-color: #df8411;
+    box-shadow: 
+    0 80px 0px #f0f0f0,
+    0 148px 0px #f0f0f0,
+    0 216px 0px #f0f0f0,
+    0 260px 0px #f0f0f0;
+    font-family: sans-serif;
+    font-size: rem;
+    letter-spacing: 4px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    margin:0 auto;
+}
+.central .cartaz div{
+    color: #080404;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+}
+.texto{
+    width: 60%;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    color: #080404;
+    font-style: oblique;
+    position: relative;
+}
+.central .cartaz button{
+    position: absolute;
+    right: -20%; bottom: -15%;
+    width: 155px; height: 32px;
+    border: none;
+    background-color: #df8411;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: arial, sans-serif;
+    letter-spacing: 4px;
+    box-shadow: 4px 4px 2px ;
+}
+/*
+.roloFilme{
+    width: 24%; height: 154px;
+    background-color: #a53e38;
+    border-radius: 8px 8px 0 0;
+    margin-left: 60px;
+    margin-top: 15%;
+    position: relative;
+    -webkit-box-reflect: below -10px;
+}
+.roloFilme::before{
+    content: '';
+    position: absolute;
+    top: 8px; left: 10px;
+    width: 16px; height: 16px;
+    background-color: #f3e1ba;
+    box-shadow: 
+                0 24px 0 0 #f3e1ba,
+                0 48px 0 0 #f3e1ba,
+                0 72px 0 0 #f3e1ba,
+                0 96px 0 0 #f3e1ba,
+                0 120px 0 0 #f3e1ba,
+                248px 0 0 0 #f3e1ba,
+                248px 24px 0 0 #f3e1ba,
+                248px 48px 0 0 #f3e1ba,
+                248px 72px 0 0 #f3e1ba,
+                248px 96px 0 0 #f3e1ba,
+                248px 120px 0 0 #f3e1ba;
+}
+*/
+.container{
+    padding-top: 4%;
+    width: 100%; height: 200px;
+    background-color: #df8411;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .item{
+    width:50%;
+    position: relative;
+}
+main .item h2 {
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    font-family: 'Creepster Regular';
+    position: absolute;
+    right: 0px; top: -60px;
+    transform: rotate(-4deg);
+    line-height: 50px;
+    border: 8px dotted red;
+    letter-spacing: 8px;
+    color: yellowgreen;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+

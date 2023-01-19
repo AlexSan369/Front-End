@@ -1,0 +1,124 @@
+/*      O QUE É CSS      */
+/*   CSS É LINGUAGEM DE ESTILOS, ESTILIZAÇÃO   */
+/*   O CSS É ESCRITO PARA O HTML, ENTÃO TRABALHA-SE EM CONJUNTO  
+    SABENDO DISSO, É NECESSÁRIO EU INFORMAR QUAL ELEMENTO HTML SERÁ
+    ESTILIZADO  (SELETOR)                                           */
+/*      CSS - CASCADING STYLE SHEETS      */
+    /*  FOLHAS DE ESTILO EM CASCATA (CAMADA) */
+    /*   TRABALHAR EM UM SISTEMA DE FOLHAS EM CASCATA 
+    DE ESTILOS SIGNIFICA, A POSSIBILIDADE DE
+    ADICIONAR NOVAS FOLHAS DE ESTILOS
+    SOBREPOSTAS UMAS AS OUTRAS, FORMANDO UM
+    EFEITO CASCATA SOBRE O ESTILO FINAL!    */
+
+
+    /*  O QUE ISSO SIGNIFICA?
+        BOM, VAMOS PENSAR O SEGUINTE: MESMO QUE EU CRIE UMA
+        ESTRUTURA HTML E NÃO INDICO QUAL SERÁ SEU ESTILO VIA CSS
+        PODEMOS PERCEBER QUE A ESTRUTURA HTML, TEM SEU ESTILO NATIVO,
+        COMO POR EXEMPLO, OS H1,H2,H... HÁ UMA LIGEIRA MUDANÇA NO
+        VISUAL DO TEXTO QUE ESTÁ DENTRO DESSAS TAGS.
+        iSSO OCORRE PORQUE A PRIMEIRA CAMADA DO CSS É
+        EMBUTIDA NO PRÓPRIO NAVEGADOR -> CHAMADA DE BROWSER STYLE
+        **MESMO QUE EU DECLARE OUTRA CAMADA CSS ISSO NÃO IMPLICA QUE MEU
+        BROWSER STYLE FOI OMITIDO OU APAGADO, PELO CONTRÁRIO, ELE CONTINUA
+        PRESENTE EM TODAS AS PROPRIEDADES QUE NÃO FOI DECLARADA NA CAMADA QUE
+        O SOBREPOS, EXEMPLO:
+            ASSIM QUE EU CRIO UMA DETERMINADA FOLHA DE ESTILO PARA SOBREPOR AS REGRAS
+            DE COR DEFUNDO DE UM <H1>, NOS IRIAMOS DECLARAR A SEGUINTE PROPRIEDADE:
+                    BACKGROUND-COLOR: BLUE;
+            VAMOS DECLARAR EM UMA FOLHA USER STYLE QUE VAMOS CHAMAR DE STYLE.CSS E IRÁ
+            SOBREPOR A COR DE FUNDO PADRÃO (DEFAULT) BRANCA DA CAMADA DE ESTILOS
+            BROWSER STYLE, PORÉM O TAMANHO DE FONTE OU A COR DELA POR EXEMPLO 
+            NÃO FOI SOBREPOSTA E PERMANACE NA CAMADA DO BROWSER STYLE
+
+             /*   O QUE DEFINE A CAMADA CSS A SER SOBREPOSTA PELA OUTRA ?   */
+    /*            - 1 NÍVEL DE SOBREPOSIÇÃO MAIS ATRÁS
+                            -BROWSER STYLE
+                    - 2 NÍVEL DE SOBREPOSIÇÃO
+                            -USER STYLE (ESTILO EXTERNO (EX: STYLE.CSS))
+                    - 3  NÍVEL DE SOBREPOSIÇÃO (MAIS A FRENTE/MAIS FORTE)
+                            - CSS INTERNO (AQUELE QUE USAMOS DENTRO
+                                        DA TAG HEAD) 
+                    - 4 NÍVEL DE SOBREPOSIÇÃO (MAIS FORTE)
+                            -CSS QUE USAMOS DIRETO NA TAG
+                            OU INLINE CSS
+
+                        AS TRÊS MANEIRAS DE DECLARAR OU SEJA VINCULAR O CSS
+                        AO HTML SÃO ESTAS: FOLHA EXTERNA, ESTILO INTERNO E ESTILO INLINE
+
+                        DEPOIS DE DECLARADO A FORMA DE ASSOCIAR O CSS AO HTML PRECISAMOS SELECIONAR
+                O ELEMENTO HTML PARA SER ESTILIZADO (LEMBRANDO QUE AO OPTAR PELO ESTILO INLINE
+                                                NÃO É NECESSÁRIO O USO DE UM SELETOR) */
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow:
+            -10px -130px 0 -25px black,
+            10px -130px 0 -25px black, 
+            0 -45px 0 -25px black,
+            0 -65px 0 -25px black,
+            0 -85px 0 -25px black,
+            0 -60px 0 15px white,
+            0 -120px 0 0 white;
+}
+span{
+    width: 10px;
+    height: 10px;
+    bottom: 90px;
+    right: -30px;
+    position: relative;
+    display: block;
+    background-color: orange;
+    border-right: 30px solid orange;
+    border-radius: 0 70% 10% 0;
+}
+
+/*  USO DAS CORES  */
+/*   AS CORES NO CSS ACEITAM TRÊS TIPOS DE CONFIGURAÇÃO
+                                           COMO VALOR:
+    NOME DA COR = white, black, red, blue ...
+    HEXADECIMAL = #FFFFFF, #000, #A123F5, ...
+    RGB = rgb(255,255,255), rgb(0,0,0), rgb(255,0,0).
+    ***RGB É O ACRÔNIMO DE RED GREEN BLUE QUE SIGNIFICA,
+    RESPECTIVAMENTE VERMELHO, VERDE E AZUL. SÃO AS
+    CORES PRIMÁRIA, ENTÃO DA MISTURA DELAS NASCEM 
+    TODAS AS CORES***            */
+
+    /*         BOX-MODEL                */
+    /*  O BOX MODEL É UM RECURSO IMPORTANTE NO CSS,
+    TODO ELEMENTO QUE É CRIADO NO HTML, RESPEITA A 
+    REGRA BOX-MODEL(MODELO DE CAIXA) E UTILIZA DESSA 
+    REGRA PARA CRIAR TODO ELEMENTO, POR EXEMPLO: DIV,
+    P, H1, SECTION, ETC.
+    O CSS RESPEITA TOTALMENTE O MODELO DE CRIAÇÃO
+    DO HTML, ENTÃO UTILIZA SUAS PROPRIEDADES PARA
+    CRIAR A ESTILIZAÇÃO.
+    AS PRINCIPAIS PROPRIEDADES DO BOX-MODEL
+        - MARGIN E PADDING (MARGEM E PREENCHIMENTO)
+        - BORDA
+        -CONTEÚDO (HEIGHT-ALTURA E WIDTH-LARGURA)
+    CADA UMA DESTAS PROPRIEDADES PODEM SER ALTERADA
+    PELO CSS E AINDA SER ACRESCENTADAS OUTRAS PROPRIEDADES
+    DE ESTILIZAÇÃO DENTRO E AO REDOR DO BOX.
+    ***PROPRIEDADE: BOX-SIZING***
+    ***MODIFICA A MANEIRA DE  ***
+    ***EXIBIR O TAMANHO DO BOX***
+
+    */
+
+
+
+
+
+

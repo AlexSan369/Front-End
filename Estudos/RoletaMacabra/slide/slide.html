@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .slider{
+            display: block;
+            height: 293px;
+            width: 600px;
+            margin: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        .slider li{
+            list-style: none;
+            position: absolute;
+            border-radius: 30px;
+        }
+        .slider li img{
+            margin: auto;
+            height: 293px;
+            width: 400px;
+            vertical-align: top;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 30px;
+            box-sizing: border-box;
+            border: 16px solid rgba(136, 103, 83, 0.3);
+            outline: 4px solid rgb(0, 0, 0, 0.3);
+            outline-offset: 4px;
+        }
+        .slider input{
+            display: none;
+        }
+        .slider label{
+            display: block;
+            background-color: transparent;
+            width: 0px; height: 0px;
+            position: absolute;
+            z-index: 10;
+            top: 310px;
+            cursor: grab;
+
+        }
+        .slider li:nth-child(1) label{  
+            left: 32px; bottom: -21px;
+            border-right: 15px solid rgb(235, 180, 115);
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+        .slider li:nth-child(2) label{  
+            left: 62px; bottom: -21px;
+            border-left: 7px solid rgb(235, 180, 115);
+            border-top: 15px solid rgb(235, 180, 115);
+            border-bottom: 15px solid rgb(235, 180, 115);
+        }
+        .slider li:nth-child(2) label::before{
+            content: '';
+            position: relative;
+            left: 4px;
+            bottom: 3px;
+            border-left: 7px solid rgb(235, 180, 115);
+            border-top: 12px solid rgb(235, 180, 115);
+            border-bottom: 0px solid rgb(235, 180, 115);
+            
+        }
+        .slider li:nth-child(3) label{  
+            left: 95px; bottom: -21px;
+            border-left: 15px solid rgb(235, 180, 115);
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+
+        .slider li input:checked ~ img {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+        .tv{
+            width: 450px; height: 377px;
+            background-color: rgb(118 48 6);
+            border-radius: 2px;
+            box-sizing: border-box;
+            padding: 4px 22px;
+            border-radius: 16px;
+            margin: 100px auto;
+            border-right: 4px solid rgb(20 20 20 / 60%);
+            border-bottom: 4px solid rgb(20 20 20 / 60%);
+            border-top: 3px solid rgb(20 20 20 / 58%);
+            border-left: 2px solid rgb(20 20 20 / 55%);
+            box-shadow: 15px 0px 0 rgba(118, 48, 6, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="tv">
+        <ul class="slider">
+            <li>
+                <input type="radio" name="slide" id="slide1" checked>
+                <label for="slide1"></label>
+                <img src="imagens/1.jpg" alt="">
+            </li>
+            <li>
+                <input type="radio" name="slide" id="slide2">
+                <label for="slide2"></label>
+                <img src="imagens/2.jpeg" alt="">
+            </li>
+            <li>
+                <input type="radio" name="slide" id="slide3">
+                <label for="slide3"></label>
+                <img src="imagens/3.webp" alt="">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
