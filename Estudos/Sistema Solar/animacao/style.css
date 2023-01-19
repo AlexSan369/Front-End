@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(51, 51, 51), rgb(0,0,0));
+}
+
+#sistemaSolar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: scaleX(5);
+}
+
+#sol{
+    width: 150px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: rgb(248, 244, 163);
+    transform: scaleX(0.25);
+    position: absolute;
+    box-shadow: 0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
+}
+
+.planeta{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+}
+
+#primeiroPlaneta{
+    background-color: brown;
+    transform: scaleX(0.2);
+    position: absolute;
+    left: -25px;
+    top: -9px;
+}
+
+#segundoPlaneta{
+    background-color: blueviolet;
+    transform: scaleX(0.22);
+    position: relative;
+    left: -1;
+    bottom: -1;
+}
+
+#terceiroPlaneta{
+    background-color: hotpink;
+    transform: scaleX(0.19);
+    position: absolute;
+    left: -5px;
+    bottom: -7px;
+}
+
+.eixo{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+.eixoCorrige{
+    width: 60px;
+    height: 60px;
+}
+
+#primeiro{
+    animation: eixoRotacao 12s infinite linear;
+}
+
+#segundo{
+    animation: eixoRotacao 14s infinite linear;
+    width: 180px;
+    background-color: blue;
+}
+
+#terceiro{
+    animation: eixoRotacao 16s infinite linear;
+}
+
+#primeiroCorrige{
+    animation: eixoRotacaoReversa 12s infinite linear;
+}
+
+#segundoCorrige{
+    animation: eixoRotacaoReversa 14s infinite linear;
+}
+
+#terceiroCorrige{
+    animation: eixoRotacaoReversa 16s infinite linear;
+}
+
+.planetaIndex{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#primeiroIndex{
+    animation: escondePlaneta 12s infinite;
+}
+
+#segundoIndex{
+    animation: escondePlaneta2 14s infinite;
+}
+
+#terceiroIndex{
+    animation: escondePlaneta3 16s infinite;
+}
+
+@keyframes escondePlaneta{
+    0%{ z-index: 999;}
+    25%{ z-index: -999;}
+    100%{ z-index: 999;}
+}
+
+@keyframes escondePlaneta2{
+    0%{ z-index: 999;}
+    5%{ z-index: -999;}
+    100%{ z-index: 999;}
+}
+
+@keyframes escondePlaneta3{
+    0%{ z-index: -999;}
+    25%{ z-index: -999;}
+    35%{ z-index: -999;}
+    100%{ z-index: 999;}
+}
+
+@keyframes eixoRotacao {
+
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(360deg);}
+}
+
+@keyframes eixoRotacaoReversa {
+
+    0% {transform: rotateZ(360deg);}
+    100% {transform: rotateZ(0deg);}
+}

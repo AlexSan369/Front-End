@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+        width: 80px;
+        height: 80px;
+        background-color: skyblue;
+        }
+
+        .perspective {
+        /* Includes a perspective to create a 3D space */
+        transform: perspective(400px) translateZ(-100px);
+        background-color: limegreen;
+        }
+
+        .scaled-translated {
+        /* Includes a perspective to create a 3D space */
+        transform: perspective(400px) scaleZ(2) translateZ(-100px);
+        background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>Normal</div>
+    <div class="perspective">Translated</div>
+    <div class="scaled-translated">Scaled</div>
+
+</body>
+</html>

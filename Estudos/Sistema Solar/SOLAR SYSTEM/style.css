@@ -1,0 +1,95 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url("universe.jpg") no-repeat;
+    background-position: 20% 50%;
+}
+
+.orbita{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    transform: scaleX(5);
+}
+
+.sol{
+    width:150px;
+    height: 150px;
+    background-color: rgb(255, 217, 2);
+    border-radius: 50%;
+    position: absolute;
+    transform: scaleX(0.33);
+    box-shadow: 0 0 60px rgb(253 203 163), 0 0 98px rgb(184 160 26);
+}
+
+.planeta{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#primeiroPlaneta{
+    background-color: red;
+    transform: scale(0.33,1);
+}
+
+#segundoPlaneta{
+    background-color: gold;
+    transform: scaleX(0.22);
+}
+
+#terceiroPlaneta{
+    background-color: green;
+    transform: scale(0.35, 1);
+}
+
+.formaPlaneta{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    animation: corrigeForma 12s infinite linear;
+}
+
+#primeiroPlanetaFixo{
+    position: relative;
+    left: 77px;
+    bottom: 66px;
+}
+
+#segundoPlanetaFixo{
+    position: relative;
+    left: -33px;
+    bottom: 33px;
+}
+
+#terceiroPlanetaFixo{
+    position: relative;
+    left: -99px;
+    bottom: 55px;
+}
+
+.rota{
+    width: 100%;
+    height: 100%;
+    animation: rotacao 12s infinite linear;
+    position: absolute;
+    /*background-color: azure;*/
+}
+
+@keyframes rotacao{
+
+    0%{transform: rotateZ(0deg);}
+    100%{transform: rotateZ(360deg);}
+}
+
+@keyframes corrigeForma{
+   
+    0%{transform: rotateZ(360deg);}
+    100%{transform: rotateZ(0deg);}
+}
