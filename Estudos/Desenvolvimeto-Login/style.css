@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'virtuality_demoregular';
+    src: url('virtuality-webfont.woff2') format('woff2'),
+         url('virtuality-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'virtuality_demoregular'; 
+}
+
+body{
+    background-image: url(img/salvar.webp);
+    background-position: 20% 70%;
+}
+
+article{
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 2%;
+    padding-top: 5%;
+}
+article p{
+    text-align: center;
+    margin-top: 15px;
+}
+article > h1 {
+    display: block;
+    font-size: 2em;;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+input{
+    display: block;
+    margin: 3% auto 0 auto;
+    font-size: 1.1em;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    border: 0.1em solid black;
+    background-color: rgba(255,255,255,0.3);
+    color: black;
+    font-weight: bold;
+}
+input[type=submit]{
+    background-color: rgba(207, 11, 11, 0.356);
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-top: 12%;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    transition: 0.9;
+    font-weight: bolder;
+    color:rgb(207, 11, 11, 0.356);
+    background-color: rgba(255,255,255,0.1);
+    
+}
+
+a{
+    text-decoration: none;
+    color: rgb(181, 255, 9);
+    font-weight: 900;
+    background-color: rgb(116, 116, 9);
+}
+a:hover{
+    text-decoration: underline;
+}
+
+#content{
+    background-color:rgb(42, 15, 66, 0.369);
+    height: inherit;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 3px solid rgb(200, 255, 3, 0.6);
+    box-shadow: 3px 6px 9px black;
+
+}
+
+#mostrar{
+    background-color: rgba(137, 43, 226);
+    width: 270px;
+    border-radius: 10px;
+    padding: 6px 9px;
+    color: aliceblue;
+    font-weight: bolder;
+    left: 60%;
+    box-shadow: 3px 6px violet;    
+    margin: 20px 0 0 150px;
+    display: none;
+}
+#passarMouse:hover + #mostrar{
+    display: block;
+}
+/*FORMATAÇÃO PLACEHOLDER*/
+::-webkit-input-placeholder  { color:rgb(32, 26, 82);font-weight: bold;font-size: 1.2em;letter-spacing: 2px; font-family:'Courier New', Courier, monospace}
+input:-moz-placeholder { color:rgb(112, 128, 172);font-weight: bold;font-size: 1.2em; letter-spacing: 2px;font-family: Arial, Helvetica, sans-serif;}
+textarea:-moz-placeholder { color:rgb(136, 172, 112);font-weight: bold;font-size: 1.2em; letter-spacing: 2px; font-family: Arial, Helvetica, sans-serif; }
