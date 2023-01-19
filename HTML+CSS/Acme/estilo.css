@@ -1,0 +1,41 @@
+body{
+    background-color: bisque;
+    margin:0;    
+}
+
+p{
+    background-color: blueviolet;
+    border-left: 10px solid black;
+    border-top: 5px dashed red;
+    border-right: 4px dotted yellow;
+    border-bottom: 3px double hotpink;
+    width: 80%;
+    overflow: scroll;
+    height: 150px;
+    margin-left:10%;
+    margin-top: -3%;
+    line-height: 50px;
+   
+}
+
+div > p {
+    margin-top: 10%;
+    text-align:center;
+    letter-spacing: 10px;
+}
+
+div > span > p {
+    font-weight:bold;
+    height: 200px;
+    border-radius: 10px 0;
+    text-shadow: 3px 5px 3px rgb(121, 204, 19);
+}
+
+p.a{
+    height: 150px;
+    padding: 20% 0 0 0;
+    text-align: center;
+    font-size: 3em;
+    text-decoration:line-through;
+    text-transform:capitalize;
+}
