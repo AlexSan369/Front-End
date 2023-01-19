@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: 
+            linear-gradient(72deg, rgba(68, 124, 226, 0.85) 10%,
+             rgba(22, 248, 194, 0.85) 99%);
+             display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+        .slider{
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+            position: absolute;
+        }
+        .slides{
+            display: flex;
+            width: 300%; /*adiciona no memento da transição*/
+            height: 100%;
+        }
+
+        div.navigation-bar {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        input{
+            display: none;
+        }
+
+        .manual-btn {
+            display: inline-block;
+            border: 2px solid #fff;
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .manual-btn:not(:last-child){
+            margin-right: 40px;
+        }
+
+        .manual-btn:hover{
+            background-color: #fff;
+            transition: 0.4s;
+        }
+
+        .slide{
+            width: 33.33%;
+            transition: 0.5s;
+        }
+
+        .slide img{
+            width: 100%;
+            height: 100%;
+            border-radius: 32px;
+        }
+
+        #radio1:checked ~ .firsty{
+            margin-left: 0;
+        }
+        
+        #radio2:checked ~ .firsty{
+            margin-left: -33.33%;
+        }
+        #radio3:checked ~ .firsty{
+            margin-left: -66.66%;
+        }
+
+        .sombra{
+            height: 5px;
+            width: 750px;
+            background: 
+            linear-gradient(-72deg, rgba(68, 124, 226, 0.85) 10%,
+             rgba(22, 248, 194, 0.85) 99%);
+            position: absolute;
+            border-radius: 8px;
+            top:560px;
+            animation: gira 8s infinite linear;
+            opacity: 0.7;
+        }
+        @keyframes gira{
+            0% {
+                filter: hue-rotate(0deg);
+                transform: scale(1);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="slider">
+
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            
+            <div class="slide firsty">
+                <img src="img/img1.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="img/img2.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="img/img3.jpg" alt="">
+            </div>
+        
+        </div>
+
+        <div class="navigation-bar">
+            <label class="manual-btn" for="radio1"></label>
+            <label class="manual-btn" for="radio2"></label>
+            <label class="manual-btn" for="radio3"></label>
+        </div>
+
+    </div>
+    <div class="sombra"></div>
+
+</body>
+ </html>
