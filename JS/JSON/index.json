@@ -1,0 +1,13 @@
+{
+    "nome":"Alex",
+    "sobrenome":"Sander",
+    "idade": 29,
+    "estaTrabalhando": true,
+    "hobbies": ["Skate", "Programação", "Trips", "Praia"],
+    "detalhesProfissao": {
+        "profissao": "Professor",
+        "area": "Tecnologia",
+        "empresa": "Instituto da Oportunidade Social",
+        "acronimo": "IOS"
+    }
+}
